@@ -63,7 +63,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 // 设置色调映射
 renderer.outputEncoding = THREE.sRGBEncoding; // 色调编码
-renderer.toneMapping = THREE.ACESFilmicToneMapping; // 类似电影的调光效果
+// renderer.toneMapping = THREE.ACESFilmicToneMapping; // 类似电影的调光效果
 renderer.toneMappingExposure = 0.5; // 色调映射的曝光程度
 renderer.shadowMap.enabled = true; // 渲染器允许阴影投射
 renderer.physicallyCorrectLights = true; // 按照物理的光照效果，整体会暗下来 默认情况下，three.js的光强数值不真实。为了使得光强更趋于真实值
@@ -160,7 +160,7 @@ plane3.position.x = 0;
 
 // 视频纹理
 const video = document.createElement("video");
-video.src = "./images/ruime8.mp4";
+video.src = "./images/ruime5.ogv";
 // video.src = "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
 video.loop = true;
 
