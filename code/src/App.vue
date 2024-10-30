@@ -63,7 +63,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 // 设置色调映射
 renderer.outputEncoding = THREE.sRGBEncoding; // 色调编码
-// renderer.toneMapping = THREE.ACESFilmicToneMapping; // 类似电影的调光效果
+renderer.toneMapping = THREE.ACESFilmicToneMapping; // 类似电影的调光效果
 renderer.toneMappingExposure = 0.5; // 色调映射的曝光程度
 renderer.shadowMap.enabled = true; // 渲染器允许阴影投射
 renderer.physicallyCorrectLights = true; // 按照物理的光照效果，整体会暗下来 默认情况下，three.js的光强数值不真实。为了使得光强更趋于真实值
@@ -128,7 +128,7 @@ scene.add(light);
 
 // 加入锐和我
 // 添加平面
-let palneTexture = new THREE.TextureLoader().load("./images/ruime4.jpg");
+let palneTexture = new THREE.TextureLoader().load("./images/ruime3.jpg");
 const planeGeometry = new THREE.PlaneGeometry(10, 14);
 const planeMaterial = new THREE.MeshBasicMaterial({
   map: palneTexture
@@ -137,7 +137,7 @@ const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.position.y = 6;
 plane.position.x = 10;
 
-let palneTexture2 = new THREE.TextureLoader().load("./images/ruime5.jpg");
+let palneTexture2 = new THREE.TextureLoader().load("./images/ruime2.jpg");
 const planeGeometry2 = new THREE.PlaneGeometry(5, 5);
 const planeMaterial2 = new THREE.MeshBasicMaterial({
   // color: 0xffffff,
@@ -148,7 +148,7 @@ plane2.position.y = 2;
 plane2.position.z = 8;
 plane2.rotation.y = Math.PI/2;
 
-let palneTexture3 = new THREE.TextureLoader().load("./images/ruime2.jpg");
+let palneTexture3 = new THREE.TextureLoader().load("./images/ruime5.jpg");
 const planeGeometry3 = new THREE.PlaneGeometry(8, 8);
 const planeMaterial3 = new THREE.MeshBasicMaterial({
   // color: 0xffffff,
@@ -160,7 +160,7 @@ plane3.position.x = 0;
 
 // 视频纹理
 const video = document.createElement("video");
-video.src = "./images/ruime5.ogv";
+video.src = "./images/ruime8.mp4";
 // video.src = "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
 video.loop = true;
 
